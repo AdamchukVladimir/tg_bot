@@ -109,4 +109,7 @@ bot.hears(/.+/, (ctx) => {
   console.log('Bot start');
 
   setInterval(updateData, 1 * 60 * 1000);
+  
+  process.once('SIGINT', () => bot.stop('SIGINT'));
+  process.once('SIGTERM', () => bot.stop('SIGTERM'));
 })();
