@@ -108,5 +108,5 @@ bot.hears(/.+/, (ctx) => {
   bot.launch();
   console.log('Bot start');
 
-  setInterval(updateData, 5 * 1000);
+  setInterval(updateData, 1 * 60 * 1000);
 })();
