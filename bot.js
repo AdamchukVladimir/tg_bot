@@ -193,7 +193,7 @@ bot.hears('👥 Сообщество', (ctx) => {
 
 bot.hears('🆘 Поддержка', (ctx) => {
   ctx.reply('Для получения поддержки обратитесь к администратору:', Markup.inlineKeyboard([
-    Markup.button.url('Написать в поддержку', 'https://t.me/KostyaErmakov')
+    Markup.button.url('Написать в поддержку', 'https://t.me/MP_Messenger_of_the_people')
   ]));
 });
 
@@ -232,7 +232,7 @@ bot.hears(/.+/, async (ctx) => {
   bot.launch();
   console.log('Bot start');
 
-  setInterval(updateData, 1 * 20 * 1000);
+  setInterval(updateData, 1 * 60 * 1000);
   
   process.once('SIGINT', () => bot.stop('SIGINT'));
   process.once('SIGTERM', () => bot.stop('SIGTERM'));
